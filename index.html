@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全球電動大客車領牌即時儀表板</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>全球電動大客車領牌即時儀表板</h1>
+        <p id="last-updated">資料更新中…</p>
+      </header>
+
+      <section class="controls card">
+        <button id="prev-month" aria-label="上個月">← 上個月</button>
+        <h2 id="month-label"></h2>
+        <button id="next-month" aria-label="下個月">下個月 →</button>
+      </section>
+
+      <section class="card">
+        <h3>五大區域</h3>
+        <nav id="region-tabs" class="tabs" aria-label="區域切換"></nav>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>國家</th>
+                <th>當月領牌數</th>
+                <th>與上月差異</th>
+              </tr>
+            </thead>
+            <tbody id="country-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>全球前五大國家變化（依領牌數排序）</h3>
+        <ol id="top-five" class="top-five"></ol>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
